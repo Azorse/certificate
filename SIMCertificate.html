@@ -147,8 +147,8 @@ text-align:right;
 	document.getElementById("module").innerHTML = 'PEC';
 	document.getElementById("datetime").innerHTML = '08/03/2018';
 */	
-	document.getElementById("userName").innerHTML = learner_name;
-	document.getElementById("module").innerHTML = module_name;
+   document.getElementById("userName").innerHTML = learner_name.replace(/%20/g, " ");
+	document.getElementById("module").innerHTML = module_name.replace(/%20/g, " ");
 	document.getElementById("datetime").innerHTML = cert_date;
 	window.print();
 	
