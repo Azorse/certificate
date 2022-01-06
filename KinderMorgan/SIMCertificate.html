@@ -16,7 +16,7 @@
 
       .wrapper .bg {
         margin: 0 auto;
-        background-image: url("sim-logo-rgb-hires.jpg");
+        background-image: url("sim-logo-rgb-hires.png");
         background-repeat: no-repeat;
         background-size: contain;
         width: 636px;
@@ -103,7 +103,7 @@
           <div id="userName" class="user"></div>
           <hr class="ruler" />
           <div class="bodytext">
-            has successfully completed the eSIM&trade; Module:
+            has successfully completed the eSIM<sup>&reg;</sup> Module:
           </div>
           <div id="module" class="moduletext"></div>
           <div id="datetime" class="datetext"></div>
@@ -112,7 +112,7 @@
 
       <div class="footer">
         <div class="sim-logo-cont">
-          <img id="sim-logo" src="sim-logo-rgb.jpg" />
+          <img id="sim-logo" src="sim-logo-rgb.png" />
         </div>
         <div class="client-logo-cont">
           <img id="client-logo" src="company-logo.png" alt="company-logo" />
@@ -134,8 +134,8 @@
 	document.getElementById("datetime").innerHTML = '08/03/2018';
 */
 
-      document.getElementById("userName").innerHTML = learner_name.replace(/%20/g," ");
-      document.getElementById("module").innerHTML = module_name.replace(/%20/g," ");
+      document.getElementById("userName").innerHTML = decodeURI(learner_name);
+      document.getElementById("module").innerHTML = decodeURI(module_name);
       document.getElementById("datetime").innerHTML = cert_date;
       window.print();
     </script>
