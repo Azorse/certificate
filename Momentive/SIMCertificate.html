@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 50px 100px 50px 100px;
+        font-family: Tahoma;
+      }
+
+      .wrapper {
+        border: 10px solid;
+        border-color: #179937;
+        border-radius: 10px;
+        width: 1000px;
+        height: 725px;
+      }
+
+      .wrapper .bg {
+        margin: 0 auto;
+        background-image: url("sim-logo-rgb-hires.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 636px;
+        height: 700px;
+        -webkit-print-color-adjust: exact !important; /* Chrome, Safari */
+        color-adjust: exact !important; /*Firefox*/
+      }
+      .container {
+        margin: 0 auto;
+      }
+
+      .heading {
+        font-size: 72px;
+        vertical-align: top;
+        padding-top: 100px;
+        text-align: center;
+      }
+
+      .user {
+        margin: 0 auto;
+        padding-top: 75px;
+        font-size: 56px;
+
+        text-align: center;
+      }
+      .ruler {
+        width: 80%;
+      }
+
+      .bodytext {
+        margin: 0 auto;
+        font-size: 14px;
+        text-align: center;
+        width: 80%;
+      }
+
+      .moduletext {
+        margin: 0 auto;
+        font-size: 32px;
+        text-align: center;
+        padding-top: 75px;
+        width: 80%;
+      }
+
+      .datetext {
+        margin: 0 auto;
+        font-size: 32px;
+        text-align: center;
+        padding-top: 75px;
+      }
+
+      .footer {
+        width: 100%;
+      }
+
+      .client-logo-cont {
+        margin-top: -110px;
+        margin-right: 50px;
+        text-align: right;
+      }
+
+      .sim-logo-cont {
+        margin-top: -95px;
+        margin-left: 50px;
+        text-align: left;
+      }
+
+      #client-logo {
+        max-height: 120px;
+        max-width: 205px;
+      }
+
+      #sim-logo {
+        max-height: 120px;
+        max-width: 105px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="bg">
+        <div class="container">
+          <div class="heading">Safety In Motion<sup>&reg;</sup></div>
+          <div id="userName" class="user"></div>
+          <hr class="ruler" />
+          <div class="bodytext">
+            has successfully completed the eSIM<sup>&reg;</sup> Module:
+          </div>
+          <div id="module" class="moduletext"></div>
+          <div id="datetime" class="datetext"></div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="sim-logo-cont">
+          <img id="sim-logo" src="sim-logo-rgb.png" />
+        </div>
+        <div class="client-logo-cont">
+          <img id="client-logo" src="company-logo.png" alt="company-logo" />
+        </div>
+      </div>
+    </div>
+    <script>
+      //Get string from URL
+      var learner_info = window.location.href.split("?print=")[1];
+
+      //Split string into variables
+      var learner_name = learner_info.split("&")[0];
+      var module_name = learner_info.split("&")[1];
+      var cert_date = learner_info.split("&")[2];
+
+      /*
+	document.getElementById("userName").innerHTML = 'Dan';
+	document.getElementById("module").innerHTML = 'PEC';
+	document.getElementById("datetime").innerHTML = '08/03/2018';
+*/
+
+      document.getElementById("userName").innerHTML = decodeURI(learner_name);
+      document.getElementById("module").innerHTML = decodeURI(module_name);
+      document.getElementById("datetime").innerHTML = cert_date;
+      window.print();
+    </script>
+  </body>
+</html>
