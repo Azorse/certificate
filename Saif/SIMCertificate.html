@@ -2,7 +2,7 @@
   <head>
     <style>
       body {
-        margin: 50px 100px 50px 100px;
+        margin: 50px;
         font-family: Tahoma;
       }
 
@@ -128,15 +128,17 @@
       var module_name = learner_info.split("&")[1];
       var cert_date = learner_info.split("&")[2];
 
-      /*
-	document.getElementById("userName").innerHTML = 'Dan';
-	document.getElementById("module").innerHTML = 'PEC';
-	document.getElementById("datetime").innerHTML = '08/03/2018';
-*/
-
+      /*    
+	    document.getElementById("userName").innerHTML = 'Larontae Taylor';
+	    document.getElementById("module").innerHTML = 'Use Mid-range Wrist Motions™';
+	    document.getElementById("datetime").innerHTML = '02/26/2024';
+      */
+      
       document.getElementById("userName").innerHTML = decodeURI(learner_name);
       document.getElementById("module").innerHTML = decodeURI(module_name);
       document.getElementById("datetime").innerHTML = cert_date;
+
+      
       window.print();
     </script>
   </body>
