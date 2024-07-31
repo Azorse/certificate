@@ -142,8 +142,9 @@
       //Set Module to SIM-Plicity
       const mark = '<sup>®</sup>';
       const trade = '™';
+      let module_name;
+      //validModule - false;
       //let module_name = "SIM-plicity" + mark
-      while (!validModule) {
         let module_prompt = prompt("Please Enter Module: PEC UMW LSB LOT");
         let module = module_prompt.toUpperCase();
         switch (module) {
@@ -168,10 +169,9 @@
             validModule = true;
             break
           default:
-            alert("Please enter 3 letter code");
-            break;
+            alert("Please enter 3 letter code");  
         }
-      }
+    
 
       //Aquire current DateTime
       let cert_date = new Date().toLocaleString().split(',')[0]
