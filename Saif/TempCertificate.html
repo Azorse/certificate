@@ -141,31 +141,36 @@
       
       //Set Module to SIM-Plicity
       const mark = '<sup>®</sup>';
-      const trade = '™'
+      const trade = '™';
       //let module_name = "SIM-plicity" + mark
-      
-      let module_prompt = prompt("Please Enter Module: PEC UMW LSB LOT")
-      let module = module_prompt.toUpperCase()
-      switch (module) {
-        case 'PEC':
-          module_name = "Position Elbows Closer" + trade
-          console.log("PEC")
-          break;
-        case 'UMW':
-          module_name = "Use Mid-range Wrist Motions" + trade
-          console.log("UMW")
-          break
-        case 'LSB':
-          module_name = "Leg Strength and Balance"
-          console.log("LSB")
-          break
-        case 'LOT':
-          module_name = "Lifting Options Technique and Pace" + mark
-          console.log("LOT")
-          break
-        default:
-          alert("Please enter 3 letter code");
-          module_prompt = prompt("Please Enter Module: PEC UMW LSB LOT")
+      while (!validModule) {
+        let module_prompt = prompt("Please Enter Module: PEC UMW LSB LOT");
+        let module = module_prompt.toUpperCase();
+        switch (module) {
+          case 'PEC':
+            module_name = "Position Elbows Closer" + trade;
+            console.log("PEC");
+            validModule = true;
+            break;
+          case 'UMW':
+            module_name = "Use Mid-range Wrist Motions" + trade;
+            console.log("UMW");
+            validModule = true;
+            break;
+          case 'LSB':
+            module_name = "Leg Strength and Balance";
+            console.log("LSB");
+            validModule = true;
+            break
+          case 'LOT':
+            module_name = "Lifting Options Technique and Pace" + mark;
+            console.log("LOT");
+            validModule = true;
+            break
+          default:
+            alert("Please enter 3 letter code");
+            module_prompt = prompt("Please Enter Module: PEC UMW LSB LOT");
+        }
       }
 
       //Aquire current DateTime
