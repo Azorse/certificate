@@ -93,6 +93,20 @@
         max-height: 120px;
         max-width: 105px;
       }
+
+      @media print {
+        @page {
+          size: landscape; /* Force landscape mode */
+          margin: 1cm; /* Set a custom margin */
+        }
+        body {
+          margin: 0; /* Remove body margin for printing */
+        }
+        header, footer {
+          display: none; /* Hide headers and footers */
+        }
+  }
+
     </style>
   </head>
   <body>
