@@ -68,6 +68,13 @@
         padding-top: 75px;
       }
 
+      .timetext {
+        margin: 0 auto;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 10px;
+      }
+
       .footer {
         width: 100%;
       }
@@ -134,22 +141,22 @@
       </div>
     </div>
     <script>
+      var currentTime = new Date();
+      var hours24 = currentTime.getHours();
+      var minutes = currentTime.getMinutes();
 
-      /*
-      //Get string from URL
-      var learner_info = window.location.href.split("?print=")[1];
+      // Convert hours to 12-hour format
+      var hours12 = hours24 % 12;
+      hours12 = hours12 ? hours12 : 12; // the hour '0' should be '12'
 
-      //Split string into variables
-      var learner_name = learner_info.split("&")[0];
-      var module_name = learner_info.split("&")[1];
-      var cert_date = learner_info.split("&")[2];
-      */
+      // Determine AM or PM
+      var ampm = hours24 >= 12 ? 'PM' : 'AM';
 
-      /*
-	    document.getElementById("userName").innerHTML = 'Dan';
-	    document.getElementById("module").innerHTML = 'PEC';
-	    document.getElementById("datetime").innerHTML = '08/03/2018';
-      */
+      // Ensure two digits for minutes
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+
+      var formattedTime = hours12 + ':' + minutes + ' ' + ampm;
+
       //Prompt for learner's name
       let learner_name = prompt("Please Enter Learner's Name:");
       
@@ -191,6 +198,7 @@
       document.getElementById("userName").innerHTML = decodeURI(learner_name);
       document.getElementById("module").innerHTML = decodeURI(module_name);
       document.getElementById("datetime").innerHTML = cert_date;
+      document.getElementById("cert_time").innerHTML = formattedTime;
       window.print();
     </script>
   </body>
