@@ -1,0 +1,2071 @@
+﻿
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+} 
+ 
+.container
+{
+  min-height: 100%;  
+  margin-bottom: -95px;    
+}
+
+.library-title-container {
+    height: 65px;
+}
+
+.container:after {
+  content: "";
+  display: block;
+}
+
+.footer, .container:after {
+  height: 90px;
+  position: relative;
+}
+
+.slide  
+{
+    display: none;
+     /*margin: 25px;*/
+     
+}
+
+.client-logo img
+{ 
+    max-width: 150px;
+    max-height: 95px;
+}
+
+#leader-instruction {
+        color: #0eb04f;
+}
+
+.white-generic-text
+{
+    color: #FFFFFF;
+}
+
+.green-generic-text 
+{
+    color: #0eb04f;
+}
+
+.green-text-break
+{
+    color: #0eb04f;
+    display: block
+}
+
+.red-generic-text {
+    color: #FF0000;
+}
+
+.black-generic-text {
+    color: #000000;
+}
+
+#navigation a:link, #navigation a:visited, #navigation a:hover
+{
+    color: #696969; text-decoration: none;  
+}
+
+#home
+{
+    position: absolute; top: 0; left: 0; width: 75px; height: 75px; overflow: hidden;  z-index:2  
+}
+
+#home-link
+{
+    position: absolute; display: none; width: 100%; text-align: center; z-index:2  
+}
+
+#exit
+{
+    position: absolute; top: 0; left: 75px; right: 80px; height: 60px; overflow: hidden;z-index:2  
+}
+
+#exit-link
+{
+    position: absolute; display: none; width: 100%; text-align: center;  z-index:2    
+}
+
+#end
+{
+    position: absolute; top: 0; right: 5px; width: 75px; height: 60px; overflow: hidden; z-index:2   
+}
+
+#end-link
+{
+    position: absolute; display: none; width: 100%; text-align: center;  z-index:2  
+}
+
+#previous
+{
+    position: absolute; top: 60px; bottom: 100px; left: 0; width: 75px; overflow: hidden; z-index:2   
+}
+
+#previous-link
+{
+    position: absolute; top:50%; display: none; width: 100%; text-align: center; z-index:2    
+}
+
+#next
+{
+    position: absolute; top: 60px; bottom: 100px; right: 5px; width: 75px; overflow: hidden; z-index:2
+}
+
+#next-link
+{
+    position: absolute; top:50%; display: none; width: 100%; text-align: center; z-index:2;   
+}
+
+.navigation-link
+{
+    border: solid #919191 1px; margin: 5px; padding: 5px; background: #e3e3e3; color: #919191; width: 60px;  font-family: Arial; font-size: 12px; font-weight: bold;  
+}
+
+.slide {
+    height: 100%;
+}
+
+.stressed-color {
+    font-family: Calibri, Verdana, Tahoma;
+    color: #C62930;
+    font-weight: 800;
+    margin-top: 10px;
+    font-size: 52px;
+}
+
+/* better text color */
+.better-color {
+    font-family: Calibri, Verdana, Tahoma;
+    color: #0eb04f;
+    font-weight: 800;
+    margin-top: 10px;
+    font-size: 52px;
+}
+
+.generic-text
+{
+	text-align:left;
+}
+
+
+
+.slide p img {
+    display: block;
+    margin: auto;
+}
+
+.animation-indent div
+{
+   margin: auto;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   /*margin-left: 216px;    
+   
+     */
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+
+
+
+
+#exit-message, #over-limit
+{
+    margin: 25px;    
+}
+
+.footer-stripe
+{
+    background-color: #0eb04f;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 1000;    
+    left: 0;
+    right: 0;    
+    height: 20px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    overflow: visible;
+}
+
+.footer-stripe .module
+{
+    float: left;
+    margin-left: 25px; 
+    color: White;   
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 22px;
+    margin-top: -4px;
+}
+
+.footer-stripe .presentation
+{
+    float: right;
+    text-align: right;
+    margin-right: 90px;   
+    color: White;   
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 22px; 
+    margin-top: -4px;
+}
+
+.footer-bottom
+{
+    padding: 10px;
+    position: absolute;    
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+.footer-stripe .page {
+    color: #FFFFFF;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-family: Calibri;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.footer-bottom .page
+{
+    float: left;
+    margin-left: 25px; 
+    color: gray;   
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 12px;
+}
+
+.footer-bottom .copyright
+{
+    float: right;
+    margin-right: 100px; 
+    color: gray;   
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 12px;
+}
+
+.footer-logo
+{
+    position: absolute;
+    right: -8px;
+    bottom: -30px;        
+    /*position: absolute;
+    right: 10px;
+    bottom: 7px;
+    margin-right: 15px;
+    margin-bottom: 6px;*/
+}
+
+.tm
+{
+    font-size: 8px;
+}
+
+
+
+.welcome-holder table td
+{
+    vertical-align: top;
+}
+
+.welcome-holder table td img
+{
+}
+
+
+
+p.poster
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 30px;     
+    margin-bottom: 5px;
+}
+
+.slide input
+{
+    margin-left: 300px;    
+}
+
+
+
+.slide-text
+{
+   margin-left: 25px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   color: gray; 
+   margin-top: 5px; 
+}
+
+.editable-text
+{
+   margin-left: 25px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   color:black; 
+   margin-top: 5px; 
+}
+
+.large-image
+{
+   margin-left: 25px; 
+   margin-top: 5px; 
+}
+
+.text-left
+{
+   margin-left: 25px; 
+   margin-top: 5px;    
+}
+
+.image-right
+{
+   margin-left: 5px; 
+   margin-top: 5px;    
+}
+
+.image-left-container {
+    float: left;
+    width: 100%;
+}
+.image-left
+{
+   margin-left: 5px; 
+   margin-top: 5px;
+    float: left;
+}
+
+
+
+
+
+
+
+.text-top
+{
+   margin-left: 25px; 
+   margin-top: 5px; 
+}
+
+.image-bottom
+{
+   margin-left: 25px; 
+   margin-top: 5px; 
+}
+
+.slide-subtext
+{
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   color: gray; 
+}
+
+
+
+/*
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;  ie8 
+}*/
+
+
+
+
+
+
+.animation-subtext 
+{
+    text-align: center;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 12px;
+    color: green;      
+}
+
+
+
+@media (max-width: 800px) and (min-width: 600px){
+
+    .footer-stripe .module
+    {
+        float: left;
+        margin-left: 25px; 
+        color: White;   
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 16px;
+        margin-top: 0px;
+    }
+
+    .footer-stripe .presentation
+    {
+        float: right;
+        text-align: right;
+        margin-right: 90px;   
+        color: White;   
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 16px; 
+        margin-top: 0px;
+    }
+    .library-title-container {
+        height: 45px;
+    }
+
+    #rightTextContainer
+    {
+        margin: 0 auto;
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 16px;
+        margin-left: 0px;
+        max-width: 295px;
+        max-height: 360px;
+        overflow-y:auto;
+    }
+
+   
+
+.footer-bottom .copyright
+{
+    font-size: 9px;
+}
+ .slide .image-left-container  .image-left .generic-image
+{
+    max-width: 280px;
+    max-height: 280px;
+}
+
+    .slide .image-left-container p {
+        max-width: 280px;
+    }
+    
+    .slide {
+    max-height: 450px;
+}
+
+.slide[data-id="#000000"] {
+    color: #0eb04f;
+    font-size: 16px;
+}
+
+.slide .generic-image {
+
+    width: 100%;
+    height: auto;
+    /*width: auto\9;*/ 
+    max-height: 420px;
+
+}
+
+.slide .large-generic-image {
+
+    max-width: 500px;
+    height: auto;
+    /*width: auto\9;*/ 
+    max-height: 400px;
+
+}
+
+  .slide-subtextone-squared
+{
+   margin-left: 20px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   color: #000000; 
+   width: 265px;
+   font-weight: bold;
+}
+
+ .slide-subtextone-portrait
+{
+   margin-left: 55px;
+   margin-right: 40px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   color: #000000; 
+   width: 265px;
+   font-weight: bold;
+}
+
+  .slide-subtextone-landscape
+{
+   margin-left: 20px;
+   margin-top: -35px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   color: #000000; 
+   width: 265px;
+   font-weight: bold;
+}
+
+.stressed-better-image {
+    max-width: 100%;
+    height: auto;
+    /*width: auto\9; */
+}
+
+.slide p, #exit-message p, #over-limit p
+{
+    margin: 0 auto;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 16px;
+    margin-left: 0px;
+}
+
+.slide-text
+{
+   margin-left: 0px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 16px;
+   margin-top: 5px; 
+}
+
+.editable-text
+{
+   margin-left: 0px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 16px;
+   color:black; 
+   margin-top: 5px; 
+}
+
+
+.client-logo
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;    
+    max-width: 150px;
+    max-height: 95px;
+}
+
+
+
+.welcome-holder
+{
+    padding-top: 15%;
+    margin-bottom: 0;
+    margin-left: 50px;
+}
+
+.welcome-header
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;   
+}
+
+.welcome-text
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 18px;
+    color: #0eb04f; 
+    padding-right: 36px;
+    display: block;
+    margin-left: 90px;
+}
+
+.welcome-header p
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;   
+}
+
+.welcome-text p
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 18px;
+    color: #0eb04f; 
+    padding-right: 36px;
+    display: block;
+    margin-left: 90px;
+}
+
+.welcome-div
+{
+    position: relative;  
+    padding-right: 20px;
+}
+
+.welcome-registered
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: #0eb04f; 
+    position: absolute;
+    right: -10px;
+    padding-right: 36px;
+}
+
+ #pairContainer{
+   width:600px; 
+    }
+ /* "auto" makes the left and right margins center the wrapper */
+#slides { 
+	width: 600px; 
+	margin-left: 50px; 
+        margin-right:25px;
+}
+
+
+ .slide-subtextone
+{
+   margin-left: 20px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   color: #000000; 
+   width: 275px;
+}
+
+
+.slide-subtextone-white
+{
+   margin-left: 20px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   width: 265px;
+   color: #FFFFFF; 
+   font-weight: bold;
+
+}
+
+.slide-subtextone-white p
+{
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   width: 265px;
+   color: #FFFFFF; 
+   font-weight: bold;
+
+}
+
+.pair-singleimage
+{
+    padding: 20px; 
+    width: 275px;   
+}
+ .pair-image
+{
+    padding: 0 20px;    
+}
+
+
+
+
+
+.slide h1, .slide h1 p 
+{
+    text-align:left;
+    margin-bottom: 20px;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.slide[data-id="#000000"] h1, .slide[data-id="#000000"] h1 p 
+{
+    text-align:left;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0eb04f;
+}
+
+.generic-text
+{
+    text-align:left;
+    font-size: 16px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #000000;
+}
+
+.default-text {
+    font-size: 16px;
+    font-family: Verdana, Tahoma, Arial;
+    color: #000000;
+}
+
+.smaller-text {
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 12px;
+    color: #000000; 
+}
+
+.larger-text {
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 18px;
+    color: #000000; 
+}
+
+.largest-text {
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 32px;
+    color: #000000;   
+}
+
+.white-generic-text
+{
+    color: #FFFFFF;
+}
+
+.green-generic-text 
+{
+    color: #0eb04f;
+}
+
+#leader-instruction h2 {
+    color: #0eb04f;
+    font-size: 16px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+}
+#leader-instruction ul {
+    color: #0eb04f;
+    font-size: 16px;
+    font-family: Verdana, Tahoma, Arial;
+}
+
+.animation-subtext p
+{
+    text-align: center;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 12px;
+    color: green;      
+}
+} 
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) and (min-width: 801px){
+
+ .slide .image-left-container  .image-left .generic-image
+{
+    max-width: 300px;
+    max-height: 400px;
+}
+  
+#rightTextContainer
+{
+    margin: 0 auto;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 16px;
+    margin-left: 0px;
+    max-width: 550px;
+}
+
+.slide {
+    max-height: 600px;
+}
+
+.slide[data-id="#000000"] {
+    color: #0eb04f;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 16px;
+}
+
+.slide .generic-image {
+
+    width: 100%;
+    height: auto;
+    /*width: auto\9;*/ 
+    max-height: 550px;
+    max-width: 700px;
+
+}
+
+.slide .large-generic-image {
+
+    max-width: 650px;
+    height: auto;
+    /*width: auto\9;*/ 
+    max-height: 80%;
+
+}
+
+.stressed-better-image {
+    max-width: 100%;
+    height: auto;
+    /*width: auto\9; */
+}
+
+  .slide-subtextone-squared
+{
+   margin-left: 20px;
+   margin-top: -5px;
+   margin-bottom: 10px;
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 14px;
+   color: #000000; 
+   width: 400px;
+   font-weight: bold;
+}
+
+ .slide-subtextone-portrait
+{
+   margin-left: 65px;
+   margin-right: 15px;
+   margin-top: 5px; 
+   margin-bottom: 10px;
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 14px;
+   color: #000000; 
+   width: 325px;
+   font-weight: bold;
+}
+
+  .slide-subtextone-landscape
+{
+   margin-left: 20px;
+   margin-top: -35px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 14px;
+   color: #000000; 
+   width: 400px;
+   font-weight: bold;
+}
+
+.slide p, #exit-message p, #over-limit p
+{
+    margin: 0 auto;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 16px;
+    margin-left: 0px;
+}
+
+.slide-text
+{
+   margin-left: 0px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 16px;
+   margin-top: 5px; 
+}
+
+.editable-text
+{
+   margin-left: 0px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 16px;
+   color:black; 
+   margin-top: 5px; 
+}
+
+.client-logo
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;    
+    max-width: 225px;
+}
+
+.welcome-holder
+{
+    padding-top: 15%;
+    margin-bottom: 0;
+    margin-left: 100px;
+}
+
+.welcome-holder table td
+{
+    vertical-align: top;
+}
+
+.welcome-holder table td img
+{
+}
+
+.welcome-header
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;   
+}
+
+.welcome-text
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 20px;
+    color: #0eb04f; 
+    padding-right: 36px;
+    display: block;
+    margin-left: 90px;
+}
+
+.welcome-header p
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 36px;
+    font-weight: bold;
+    color: #000000;   
+}
+
+.welcome-text p
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 20px;
+    color: #0eb04f; 
+    padding-right: 36px;
+    display: block;
+    margin-left: 90px;
+}
+
+.welcome-div
+{
+    position: relative;  
+    padding-right: 36px;
+}
+
+.welcome-registered
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0eb04f; 
+    position: absolute;
+    right: -10px;
+    padding-right: 36px;
+}
+
+ #pairContainer{
+   width:850px; 
+    }
+ /* "auto" makes the left and right margins center the wrapper */
+#slides { 
+	width: 900px; 
+	margin-left:50px;
+    margin-right: 15px; 
+}
+
+
+ .slide-subtextone
+{
+   margin-left: 20px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   color: #000000; 
+   width: 325px;
+}
+
+
+.slide-subtextone-white
+{
+   margin-left: 35px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 14px;
+   width: 400px;
+   color: #FFFFFF; 
+   font-weight: bold;
+
+}
+
+.slide-subtextone-white p
+{
+
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 14px;
+   width: 400px;
+   color: #FFFFFF; 
+   font-weight: bold;
+
+}
+
+.pair-singleimage
+{
+    padding: 20px; 
+    width: 325px;   
+}
+ .pair-image
+{
+    padding: 0 20px;    
+}
+
+
+
+
+
+.slide h1, .slide h1 p 
+{
+    text-align:left;
+    margin-bottom: 10px;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.slide[data-id="#000000"] h1, .slide[data-id="#000000"] h1 p 
+{
+    color: #0eb04f;
+}
+
+.generic-text
+{
+    text-align:left;
+    font-size: 18px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #000000;
+}
+
+    .default-text {
+        font-size: 18px;
+        font-family: Verdana, Tahoma, Arial;
+        color: #000000;
+    }
+
+    .smaller-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 16px;
+        color: #000000; 
+    }
+
+    .larger-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 20px;
+        color: #000000; 
+    }
+
+    .largest-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 36px;
+        color: #000000;   
+    }
+/*.white-generic-text
+{
+    text-align:left;
+    font-size: 18px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #FFFFFF;
+}*/
+
+/*.green-generic-text 
+{
+    text-align:left;
+    font-size: 18px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #0eb04f;
+}*/
+
+
+#leader-instruction h2 {
+    color: #0eb04f;
+    font-size: 16px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+}
+#leader-instruction ul {
+    color: #0eb04f;
+    font-size: 16px;
+    font-family: Verdana, Tahoma, Arial;
+}
+
+.animation-subtext p
+{
+    text-align: center;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 12px;
+    color: green;      
+}
+}
+
+
+@media (max-width: 1280px) and (min-width: 1025px){
+    
+ .slide .image-left-container  .image-left .generic-image
+{
+    max-width: 500px;
+    max-height: 600px;
+}
+    
+    .slide {
+    max-height: 800px;
+}
+
+    .slide[data-id="#000000"]{
+    color: #0eb04f;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 18px;
+}
+
+.slide .generic-image {
+
+    width: 100%;
+    height: auto;
+    /*width: auto\9;*/ 
+    max-height: 600px;
+    max-width: 900px;
+
+}
+
+.slide .large-generic-image {
+
+    max-width: 750px;
+    height: auto;
+    /*width: auto\9;*/ 
+    max-height: 650px;
+
+}
+.stressed-better-image {
+    max-width: 100%;
+    height: auto;
+    /*width: auto\9; */
+}
+
+ .slide-subtextone-portrait
+{
+   margin-left: 80px;
+   margin-right: 15px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 16px;
+   color: #000000; 
+   width: 350px;
+   font-weight: bold;
+}
+
+   .slide-subtextone-squared
+{
+   margin-left: 30px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 16px;
+   color: #000000; 
+   width: 425px;
+   font-weight: bold;
+}
+  .slide-subtextone-landscape
+{
+   margin-left: 30px;
+   margin-top: -50px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 16px;
+   color: #000000; 
+   width: 425px;
+   font-weight: bold;
+}
+
+.slide p, #exit-message p, #over-limit p
+{
+    margin: 0 auto;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 18px;
+    margin-left: 0px;
+}
+
+.slide-text
+{
+   margin-left: 0px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 18px;
+   margin-top: 5px; 
+}
+
+.editable-text
+{
+   margin-left: 0px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 18px;
+   color:black; 
+   margin-top: 5px; 
+}
+
+.client-logo
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;    
+    max-width: 225px;
+}
+
+.welcome-holder
+{
+    padding-top: 15%;
+    margin-bottom: 0;
+    margin-left: 100px;
+}
+
+.welcome-holder table td
+{
+    vertical-align: top;
+}
+
+.welcome-holder table td img
+{
+}
+
+.welcome-header
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 46px;
+    font-weight: bold;
+    color: #000000;   
+}
+
+.welcome-text
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 32px;
+    color: #0eb04f; 
+    padding-right: 28px;
+    display: block;
+    margin-left: 90px;
+}
+
+.welcome-header p
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 46px;
+    font-weight: bold;
+    color: #000000;   
+}
+
+.welcome-text p
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 32px;
+    color: #0eb04f; 
+    padding-right: 28px;
+    display: block;
+    margin-left: 90px;
+}
+
+.welcome-div
+{
+    position: relative;  
+    padding-right: 36px;
+}
+
+.welcome-registered
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0eb04f; 
+    position: absolute;
+    right: -10px;
+    padding-right: 36px;
+}
+
+ #pairContainer{
+   width:950px; 
+    }
+ /* "auto" makes the left and right margins center the wrapper */
+#slides { 
+	width: 1000px; 
+	margin: 0 auto;
+}
+
+ .slide-subtextone
+{
+   margin-left: 20px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   color: #000000; 
+   width: 425px;
+}
+
+
+.slide-subtextone-white
+{
+   margin-left: 30px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 16px;
+   width: 425px;
+   color: #FFFFFF; 
+   font-weight: bold;
+
+}
+
+.slide-subtextone-white p
+{
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 16px;
+   width: 425px;
+   color: #FFFFFF; 
+   font-weight: bold;
+
+}
+
+.pair-singleimage
+{
+    padding: 20px; 
+    width: 425px;   
+}
+ .pair-image
+{
+    padding: 0 20px;    
+}
+
+
+.slide h1, .slide h1 p 
+{
+    text-align:left;
+    margin-bottom: 20px;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 26px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.slide[data-id="#000000"] h1, .slide[data-id="#000000"] h1 p 
+{
+    color: #0eb04f;
+}
+
+
+
+#leader-instruction h2 {
+    color: #0eb04f;
+    font-size: 16px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+}
+#leader-instruction ul {
+    color: #0eb04f;
+    font-size: 16px;
+    font-family: Verdana, Tahoma, Arial;
+}
+
+.generic-text
+{
+    text-align:left;
+    font-size: 18px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #000000;
+}
+
+    .default-text {
+        font-size: 18px;
+        font-family: Verdana, Tahoma, Arial;
+        color: #000000;
+    }
+
+    .smaller-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 16px;
+        color: #000000; 
+    }
+
+    .larger-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 32px;
+        color: #000000; 
+    }
+
+    .largest-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 46px;
+        color: #000000;   
+    }
+/*.white-generic-text
+{
+    text-align:left;
+    font-size: 18px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.green-generic-text 
+{
+    text-align:left;
+    font-size: 18px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #0eb04f;
+}*/
+
+.animation-subtext p
+{
+    text-align: center;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 12px;
+    color: green;      
+}
+}
+
+
+@media (max-width: 1680px) and (min-width: 1281px){
+
+   .slide .image-left-container  .image-left .generic-image
+{
+    max-width: 600px;
+     max-height: 750px;
+}
+
+    .slide {
+    max-height: 800px;
+}
+    .slide[data-id="#000000"] {
+    color: #0eb04f;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 24px;
+}
+    .slide .generic-image {
+
+    width: 100%;
+    height: auto;
+    /*width: auto\9;*/ 
+    max-height: 750px;
+        max-width: 1100px;
+
+}
+
+    .slide .large-generic-image {
+
+        max-width: 800px;
+    height: auto;
+    /*width: auto\9;*/ 
+    max-height: 800px;
+
+}
+.stressed-better-image {
+    width: 100%;
+    height: auto;
+    /*width: auto\9; */
+}
+
+  .slide-subtextone-squared
+{
+   margin-left: 20px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 20px;
+   color: #000000; 
+   width: 550px;
+   font-weight: bold;
+}
+
+ .slide-subtextone-portrait
+{
+   margin-left: 85px;
+   margin-right: 15px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 20px;
+   color: #000000; 
+   width: 500px;
+   font-weight: bold;
+}
+
+  .slide-subtextone-landscape
+{
+   margin-left: 20px;
+   margin-top: -50px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 20px;
+   color: #000000; 
+   width: 550px;
+   font-weight: bold;
+}
+.slide p, #exit-message p, #over-limit p
+{
+    margin: 0 auto;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 20px;
+    margin-left: 0px;
+}
+
+.slide-text
+{
+   margin-left: 0px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 20px;
+   margin-top: 5px; 
+}
+
+.editable-text
+{
+   margin-left: 0px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 20px;
+   color:black; 
+   margin-top: 5px; 
+}
+
+.client-logo
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;    
+    max-width: 225px;
+}
+
+.welcome-holder
+{
+    padding-top: 15%;
+    margin-bottom: 0;
+    margin-left: 100px;
+}
+
+.welcome-holder table td
+{
+    vertical-align: top;
+}
+
+.welcome-holder table td img
+{
+}
+
+.welcome-header
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 46px;
+    font-weight: bold;
+    color: #000000;   
+}
+
+.welcome-header p
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 46px;
+    font-weight: bold;
+    color: #000000;   
+}
+
+.welcome-text 
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 32px;
+    color: #0eb04f; 
+    padding-right: 36px;
+    display: block;
+    margin-left: 90px;
+}
+
+
+.welcome-text p
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 32px;
+    color: #0eb04f; 
+    padding-right: 36px;
+    display: block;
+    margin-left: 90px;
+}
+
+.welcome-div
+{
+    position: relative;  
+    padding-right: 36px;
+}
+
+.welcome-registered
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0eb04f; 
+    position: absolute;
+    right: -10px;
+    padding-right: 36px;
+}
+
+ #pairContainer{
+   width:1000px; 
+    }
+ /* "auto" makes the left and right margins center the wrapper */
+#slides { 
+	width: 1100px; 
+	margin: 0 auto;
+}
+
+ .slide-subtextone
+{
+   margin-left: 20px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 12px;
+   color: #000000; 
+   width: 500px;
+}
+
+
+    .slide-subtextone-white {
+        margin-left: 20px;
+        margin-top: 5px;
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 20px;
+        width: 550px;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    .slide-subtextone-white p {
+        margin-top: 5px;
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 20px;
+        width: 550px;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+.pair-singleimage
+{
+    padding: 20px; 
+    width: 500px;   
+}
+ .pair-image
+{
+    padding: 0 20px;    
+}
+
+
+.slide h1, .slide h1 p
+{
+    text-align:left;
+    margin-bottom: 20px;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.slide[data-id="#000000"] h1, .slide[data-id="#000000"] h1 p
+{
+    color: #0eb04f;
+}
+
+#leader-instruction h2 {
+    color: #0eb04f;
+    font-size: 20px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+}
+#leader-instruction ul {
+    color: #0eb04f;
+    font-size: 20px;
+    font-family: Verdana, Tahoma, Arial;
+}
+
+.generic-text
+{
+    text-align:left;
+    font-size: 20px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #000000;
+}
+
+    .default-text {
+        font-size: 20px;
+        font-family: Verdana, Tahoma, Arial;
+        color: #000000;
+    }
+
+    .smaller-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 18px;
+        color: #000000; 
+    }
+
+    .larger-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 32px;
+        color: #000000; 
+    }
+
+    .largest-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 46px;
+        color: #000000;   
+    }
+
+.animation-subtext p
+{
+    text-align: center;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 12px;
+    color: green;      
+}
+/*.white-generic-text
+{
+    text-align:left;
+    font-size: 20px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.green-generic-text 
+{
+    text-align:left;
+    font-size: 20px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #0eb04f;
+}*/
+}
+
+@media (min-width: 1681px){
+.stressed-better-image {
+    width: 80%;
+    height: auto;
+    /*width: auto\9; */
+}
+.slide p, #exit-message p, #over-limit p
+{
+    margin: 0 auto;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 24px;
+}
+
+.slide-text
+{
+   margin-left: 0px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 24px;
+   margin-top: 5px; 
+}
+
+.editable-text
+{
+   margin-left: 0px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 24px;
+   color:black; 
+   margin-top: 5px; 
+}
+
+.client-logo
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;    
+    max-width: 350px;
+}
+
+.welcome-holder
+{
+    padding-top: 15%;
+    margin-bottom: 0;
+    margin-left: 100px;
+}
+
+.welcome-holder table td
+{
+    vertical-align: top;
+}
+
+.welcome-holder table td img
+{
+}
+
+.welcome-header
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 52px;
+    font-weight: bold;
+    color: #000000;   
+}
+
+.welcome-text
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 36px;
+    color: #0eb04f; 
+    padding-right: 36px;
+    display: block;
+    margin-left: 90px;
+}
+
+.welcome-header p
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 52px;
+    font-weight: bold;
+    color: #000000;   
+}
+
+.welcome-text p
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 36px;
+    color: #0eb04f; 
+    padding-right: 36px;
+    display: block;
+    margin-left: 90px;
+}
+
+.welcome-div
+{
+    position: relative;  
+    padding-right: 36px;
+}
+
+.welcome-registered
+{
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0eb04f; 
+    position: absolute;
+    right: -10px;
+    padding-right: 36px;
+}
+
+ #pairContainer{
+   width:1400px; 
+    }
+ /* "auto" makes the left and right margins center the wrapper */
+#slides { 
+	width: 1500px; 
+	margin: 0 auto;
+}
+
+  .slide-subtextone-squared
+{
+   margin-left: 85px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 18px;
+   color: #000000; 
+   width: 550px;
+   font-weight: bold;
+}
+
+ .slide-subtextone-portrait
+{
+   margin-left: 150px;
+   margin-right: 100px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 18px;
+   color: #000000; 
+   width: 410px;
+   font-weight: bold;
+}
+
+  .slide-subtextone-landscape
+{
+   margin-left: 85px;
+   margin-top: -70px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 18px;
+   color: #000000; 
+   width: 550px;
+   font-weight: bold;
+}
+
+
+.slide-subtextone-white
+{
+
+   margin-left: 85px;
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 18px;
+   width: 550px;
+   color: #FFFFFF; 
+   font-weight: bold;
+
+}
+
+.slide-subtextone-white p
+{
+
+   margin-top: 5px; 
+   font-family: Verdana, Tahoma, Arial;
+   font-size: 18px;
+   width: 550px;
+   color: #FFFFFF; 
+   font-weight: bold;
+
+}
+
+.pair-singleimage
+{
+    padding: 20px; 
+    width: 500px;   
+}
+ .pair-image
+{
+    padding: 0 20px;    
+    max-width:500px;
+}
+
+
+.slide h1, .slide h1 p 
+{
+    text-align:left;
+    margin-bottom: 20px;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.slide[data-id="#000000"] h1, .slide[data-id="#000000"] h1 p 
+{
+    text-align:left;
+    margin-bottom: 20px;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 32px;
+    font-weight: bold;
+    color: #0eb04f;
+}
+
+.slide[data-id="#000000"] {
+    font-size: 28px;
+    color: #0eb04f;
+}
+
+.generic-text
+{
+    text-align:left;
+    font-size: 24px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #000000;
+}
+
+    .default-text {
+        font-size: 24px;
+        font-family: Verdana, Tahoma, Arial;
+        color: #000000;
+    }
+
+    .smaller-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 18px;
+        color: #000000; 
+    }
+
+    .larger-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 36px;
+        color: #000000; 
+    }
+
+    .largest-text {
+        font-family: Verdana, Tahoma, Arial;
+        font-size: 52px;
+        color: #000000;   
+    }
+/*.white-generic-text
+{
+    text-align:left;
+    font-size: 24px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.green-generic-text 
+{
+    text-align:left;
+    font-size: 24px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+    color: #0eb04f;
+}*/
+
+
+
+#leader-instruction h2 {
+    color: #0eb04f;
+    font-size: 20px;
+    font-family: Verdana, Tahoma, Arial;
+    font-weight: bold;
+}
+#leader-instruction ul {
+    color: #0eb04f;
+    font-size: 20px;
+    font-family: Verdana, Tahoma, Arial;
+}
+.slide {
+    max-height: 900px;
+}
+
+.slide .generic-image {
+
+  /*  width: 80%;*/
+    height: auto;
+    max-height: 725px;
+    max-width: 1400px;
+
+}
+
+.animation-subtext p
+{
+    text-align: center;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 12px;
+    color: green;      
+}
+
+.slide .large-generic-image {
+
+    width: 750px;
+    height: auto;
+    max-height: 800px;
+}
+
+
+}
+/*
+ * SimpleModal Basic Modal Dialog
+ * http://simplemodal.com
+ *
+ * Copyright (c) 2013 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+
+#basic-modal-content {display:none;}
+
+/* Overlay */
+#simplemodal-overlay {background-color:#000;}
+
+#simplemodal-data p { margin-bottom: 20px !important; line-height:100% !important}
+
+/* Container */
+#simplemodal-container {height:360px; width:600px; color:#000; background-color:#fff; border:4px solid #444; padding:12px;}
+#simplemodal-container .simplemodal-data {padding:8px;}
+#simplemodal-container code {background:#141414; border-left:3px solid #65B43D; color:#bbb; display:block; font-size:12px; margin-bottom:12px; padding:4px 6px 6px;}
+#simplemodal-container a {color:#ddd;}
+#simplemodal-container a.modalCloseImg {background:url(x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
+#simplemodal-container h3 {color:#000;}

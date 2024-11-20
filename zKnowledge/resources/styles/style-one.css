@@ -1,0 +1,36 @@
+﻿.slide p, #exit-message p, #over-limit p
+{    
+    margin-left: 25px;
+}
+
+.slide p, .slide table
+{
+    margin-left: 0;
+}
+
+.animation-subtext
+{
+   margin-left: 216px; 
+}
+
+.animation-subtextlarge
+{
+   margin-left: 316px; 
+}
+
+p.poster
+{    
+    font-size: 30px;         
+}
+
+.footer-stripe .page {
+    color: #FFFFFF;
+    font-family: Calibri;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+
+
+
+

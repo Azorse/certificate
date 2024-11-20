@@ -1,0 +1,41 @@
+﻿.slide p, #exit-message p, #over-limit p
+{    
+    margin-left: 15px;
+}
+
+.slide p, .slide table
+{
+    margin-left: 144px; /* Normal web images are 72dpi (dots per inch) so 144px is roughly two inches */
+}
+
+.animation-subtext
+{
+   margin-left: 360px;
+}
+
+.animation-indent
+{
+   margin-left: 360px !important;     
+   margin-top: 20px;
+    margin-bottom: 20px;
+}
+.animation-subtextlarge
+{
+   margin-left: 460px;  
+}
+
+p.poster
+{    
+    font-size: 20px;         
+}
+
+.text-left
+{
+   margin-right: 5px;
+   width: 300px;
+}
+
+.image-right
+{ 
+   width: 300px;
+}
