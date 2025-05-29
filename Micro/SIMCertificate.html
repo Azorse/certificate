@@ -141,43 +141,38 @@
       </div>
     </div>
     <script>
-      var currentTime = new Date();
-      var hours24 = currentTime.getHours();
-      var minutes = currentTime.getMinutes();
-
-      // Convert hours to 12-hour format
-      var hours12 = hours24 % 12;
-      hours12 = hours12 ? hours12 : 12; // the hour '0' should be '12'
-
-      // Determine AM or PM
-      var ampm = hours24 >= 12 ? 'PM' : 'AM';
-
-      // Ensure two digits for minutes
-      minutes = minutes < 10 ? '0' + minutes : minutes;
-
-      var formattedTime = hours12 + ':' + minutes + ' ' + ampm;
-
-      //Get string from URL
       var learner_info = window.location.href.split("?print=")[1];
 
-      //Split string into variables
-      var learner_name = learner_info.split("&")[0];
-      var module_name = learner_info.split("&")[1];
-      var cert_date = learner_info.split("&")[2];
+      if (learner_info) {
+        var parts = learner_info.split("&");
 
-      /*    
-	    document.getElementById("userName").innerHTML = 'Larontae Taylor';
-	    document.getElementById("module").innerHTML = 'Use Mid-range Wrist Motions™';
-	    document.getElementById("datetime").innerHTML = '02/26/2024';
-      */
-      
-      document.getElementById("userName").innerHTML = decodeURIComponent(learner_name);
-      document.getElementById("module").innerHTML = decodeURIComponent(module_name);
-      document.getElementById("datetime").innerHTML = cert_date;
-      document.getElementById("cert_time").innerHTML = formattedTime;
+        // First value is always the name
+        var learner_name = decodeURIComponent(parts[0]);
 
-      
-      window.print();
+        // Last value is always the date
+        var cert_date = decodeURIComponent(parts[parts.length - 1]);
+
+        // Everything in between is the course/module name
+        var module_parts = parts.slice(1, -1);
+        var module_name = decodeURIComponent(module_parts.join("&"));
+
+        // Apply to DOM
+        document.getElementById("userName").innerHTML = learner_name;
+        document.getElementById("module").innerHTML = module_name;
+        document.getElementById("datetime").innerHTML = cert_date;
+
+        // Time handling
+        var currentTime = new Date();
+        var hours24 = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var hours12 = hours24 % 12 || 12;
+        var ampm = hours24 >= 12 ? 'PM' : 'AM';
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        var formattedTime = hours12 + ':' + minutes + ' ' + ampm;
+        document.getElementById("cert_time").innerHTML = formattedTime;
+
+        window.print();
+      }
     </script>
   </body>
 </html>
