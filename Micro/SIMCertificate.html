@@ -171,8 +171,8 @@
 	    document.getElementById("datetime").innerHTML = '02/26/2024';
       */
       
-      document.getElementById("userName").innerHTML = decodeURI(learner_name);
-      document.getElementById("module").innerHTML = decodeURI(module_name);
+      document.getElementById("userName").innerHTML = decodeURIComponent(learner_name);
+      document.getElementById("module").innerHTML = decodeURIComponent(module_name);
       document.getElementById("datetime").innerHTML = cert_date;
       document.getElementById("cert_time").innerHTML = formattedTime;
 
