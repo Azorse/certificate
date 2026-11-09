@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Safety In Motion Certificate</title>
+<style>
+  body { margin: 50px; font-family: Tahoma, Geneva, sans-serif; background: #fff; color: #000; }
+  .wrapper {
+    position: relative;
+    border: 10px solid #179937;
+    border-radius: 10px;
+    width: 1000px;
+    height: 725px;
+    box-sizing: content-box;
+  }
+  .bg {
+    margin: 0 auto;
+    background: url("sim-logo-rgb-hires.png") no-repeat center top / contain;
+    width: 636px;
+    height: 700px;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .heading  { font-size: 72px; padding-top: 100px; text-align: center; }
+  .user     { padding-top: 75px; font-size: 56px; text-align: center; }
+  .ruler    { width: 80%; }
+  .bodytext { margin: 0 auto; font-size: 14px; text-align: center; width: 80%; }
+  .moduletext { margin: 0 auto; font-size: 32px; text-align: center; padding-top: 75px; width: 80%; }
+  .datetext { font-size: 32px; text-align: center; padding-top: 75px; }
+  .timetext { font-size: 24px; text-align: center; padding-top: 10px; }
+
+  /* Logos sit in fixed boxes in the bottom corners, so any logo shape fits without per-client offsets. */
+  .logo-box {
+    position: absolute;
+    bottom: 20px;
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .logo-box img { max-height: 100%; max-width: 100%; object-fit: contain; }
+  .logo-sim    { left: 50px;  width: 105px; justify-content: flex-start; }
+  .logo-client { right: 30px; width: 220px; justify-content: flex-end; }
+
+  @media print {
+    @page { size: landscape; margin: 1cm; }
+    body { margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="bg">
+    <div class="heading">Safety In Motion<sup>&reg;</sup></div>
+    <div id="userName" class="user"></div>
+    <hr class="ruler">
+    <div id="bodytext" class="bodytext"></div>
+    <div id="module" class="moduletext"></div>
+    <div id="datetime" class="datetext"></div>
+    <div id="cert_time" class="timetext"></div>
+  </div>
+  <div class="logo-box logo-sim"><img src="sim-logo-rgb.png" alt="Safety In Motion"></div>
+  <div class="logo-box logo-client" id="clientLogoBox"></div>
+</div>
+
+<script>
+/*
+  One certificate page for every client.
+
+  Course links:   cert/?client=THD&name=...&module=...&date=...
+  Options:        type=module|kr     wording (default module)
+                  lang=en|es         language (default en)
+                  time=12|24         add the time the certificate was printed
+  Manual tool:    mode=manual        asks for the learner's name; module and date come from
+                                     the link, or the module is asked for and the date is today
+
+  Old per-client pages redirect here, so delivered courses keep working.
+*/
+
+// Client logos. Keys are the old folder names. Logos stay where they are.
+// Optional per client: logoHeight / logoWidth to resize the logo box.
+var CLIENTS = {
+  AAuto:        { logo: "../AAuto/company-logo.png" },
+  Aera:         { logo: "../Aera/company-logo.png" },
+  Columbia:     { logo: "../Columbia/company-logo.png" },
+  Crowley:      { logo: "../Crowley/company-logo.png" },
+  CyrusOne:     { logo: "../CyrusOne/company-logo.png" },
+  HDS:          { logo: "../HDS/company-logo.png" },
+  Huntsman:     { logo: "../Huntsman/company-logo.png" },
+  KDP:          { logo: "../KDP/company-logo.png" },
+  Kerry:        { logo: "../Kerry/company-logo.png" },
+  KinderMorgan: { logo: "../KinderMorgan/company-logo.png" },
+  KR:           { logo: null },
+  Kroger:       { logo: "../Kroger/company-logo.png" },
+  Matson:       { logo: "../Matson/company-logo.png" },
+  Micro:        { logo: "../Micro/company-logo.png" },
+  Momentive:    { logo: "../Momentive/company-logo.png" },
+  Phillips66:   { logo: "../Phillips66/company-logo.png" },
+  Saif:         { logo: "../Saif/company-logo.png" },
+  SDGE:         { logo: "../SDGE/company-logo.png" },
+  SoCalGas:     { logo: "../SoCalGas/company-logo.png" },
+  THD:          { logo: "../THD/company-logo.png" },
+  VenturaFoods: { logo: "../VenturaFoods/company-logo.png" },
+  WCMRC:        { logo: "../WCMRC/company-logo.png" }
+};
+
+var WORDING = {
+  en: { module: "has successfully completed the eSIM® Module:",
+        kr:     "has successfully completed the Knowledge Refresher for:" },
+  es: { module: "ha completado con éxito el Módulo de eSIM® para:" }
+};
+
+// Module codes for the manual tool.
+var MODULES = {
+  PEC: "Position Elbows Closer™",
+  UMW: "Use Mid-range Wrist Motions™",
+  LSB: "Leg Strength and Balance",
+  LOT: "Lifting Options Technique and Pace®"
+};
+
+var q = new URLSearchParams(location.search);
+var client = CLIENTS[q.get("client")] || { logo: null };
+var type = q.get("type") === "kr" ? "kr" : "module";
+var lang = WORDING[q.get("lang")] ? q.get("lang") : "en";
+var name = q.get("name") || "";
+var moduleName = q.get("module") || "";
+var date = q.get("date") || "";
+
+if (q.get("mode") === "manual") {
+  name = prompt("Please enter the learner's name:") || "";
+  while (!moduleName) {
+    var code = (prompt("Please enter module: " + Object.keys(MODULES).join(" ")) || "").trim().toUpperCase();
+    if (MODULES[code]) moduleName = MODULES[code];
+    else if (!code) break;
+  }
+  if (!date) date = new Date().toLocaleDateString("en-US");
+}
+
+// Text is inserted as text, never as HTML, then ® and ™ are raised.
+function setText(id, text) {
+  var el = document.getElementById(id);
+  el.textContent = text;
+  el.innerHTML = el.innerHTML.replace(/([®™])/g, "<sup>$1</sup>");
+}
+
+setText("userName", name);
+setText("bodytext", WORDING[lang][type] || WORDING.en[type]);
+setText("module", moduleName);
+setText("datetime", date);
+
+var t = q.get("time");
+if (t === "12" || t === "24") {
+  var now = new Date(), h = now.getHours(), m = ("0" + now.getMinutes()).slice(-2);
+  document.getElementById("cert_time").textContent =
+    t === "24" ? h + ":" + m : ((h % 12) || 12) + ":" + m + " " + (h >= 12 ? "PM" : "AM");
+}
+
+var box = document.getElementById("clientLogoBox");
+if (client.logo) {
+  var img = new Image();
+  img.alt = "";
+  img.src = client.logo;
+  box.appendChild(img);
+  if (client.logoHeight) box.style.height = client.logoHeight + "px";
+  if (client.logoWidth) box.style.width = client.logoWidth + "px";
+}
+
+// Print once the logos have loaded.
+window.addEventListener("load", function () {
+  if (q.get("noprint") !== "1") window.print();
+});
+</script>
+</body>
+</html>
